@@ -4,7 +4,7 @@
  * @Description: webshot service
  */
 import path from "path";
-import screenshot from "webshot-phantom2";
+import screenshot from "webshot2";
 
 const SCREENSHOT_PATH = path.join(path.dirname(__dirname), "public/images/screenshots/");
 

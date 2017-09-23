@@ -25,7 +25,8 @@
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "phantomjs": "^2.1.7",
-    "webshot-phantom2": "^1.0.4"
+    "webshot-phantom2": "^1.0.4",
+    "webshot2": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
