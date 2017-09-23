@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vvotm/webshort.git"
+    "url": "git+https://github.com/vvotm/webshot2.git"
   },
   "keywords": [
     "web",
@@ -18,14 +18,13 @@
   "author": "luowen <bigpao.luo@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vvotm/webshort/issues"
+    "url": "https://github.com/vvotm/webshot2/issues"
   },
   "homepage": "https://github.com/vvotm/webshort#readme",
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "phantomjs": "^2.1.7",
-    "webshot-phantom2": "^1.0.4",
     "webshot2": "^2.0.0"
   },
   "devDependencies": {
