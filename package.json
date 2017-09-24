@@ -1,0 +1,34 @@
+{
+  "name": "webshot",
+  "version": "1.0.0",
+  "description": "web screenshot project",
+  "main": "webshot.js",
+  "scripts": {
+    "test": "console.log(\"webscreenshot\")",
+    "start": "node node_modules/babel-cli/bin/babel-node.js server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvotm/webshort.git"
+  },
+  "keywords": [
+    "web",
+    "screenshot"
+  ],
+  "author": "luowen <bigpao.luo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vvotm/webshort/issues"
+  },
+  "homepage": "https://github.com/vvotm/webshort#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "phantomjs": "^2.1.7",
+    "webshot-phantom2": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
