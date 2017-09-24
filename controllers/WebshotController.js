@@ -6,6 +6,7 @@
 
 import AppController from "./AppController";
 import webshotService from "../services/webshotService";
+import appconfig from "../config/app";
 
 export default class WebshotCtrl extends AppController{
     webShot(request, response) {
@@ -17,7 +18,8 @@ export default class WebshotCtrl extends AppController{
         }
         let filename = `${(new Date()).getTime()}_${Math.ceil(Math.random() * 10000)}.jpg`;
         webshotService.screenshot(url, filename, width, height);
-        return response.send(super.success({query: request.query, filename: filename}));
+        let previewPath = `${appconfig.assetsRoot}/images/screenshots/${filename}`;
+        return response.send(super.success({query: request.query, filename: filename, preview: previewPath}));
     }
 
     htmlShot(request, response) {

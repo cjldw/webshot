@@ -9,6 +9,15 @@ import screenshot from "webshot2";
 const SCREENSHOT_PATH = path.join(path.dirname(__dirname), "public/images/screenshots/");
 
 export default class WebshotService {
+    /**
+     * do screen shot action
+     *
+     * @param url
+     * @param filename
+     * @param width
+     * @param height
+     * @param savepath
+     */
     static screenshot(url, filename, width, height, savepath = "") {
         let options = {
             "shotSize": {
@@ -20,5 +29,14 @@ export default class WebshotService {
         return screenshot(url, SCREENSHOT_PATH + filename, options, (err) => {
             console.log(err)
         })
+    }
+
+    /**
+     * get screenshot save path
+     *
+     * @returns {string}
+     */
+    static screenshotPath() {
+        return SCREENSHOT_PATH;
     }
 }
