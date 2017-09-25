@@ -5,7 +5,7 @@
  */
 
 import AppController from "./AppController";
-import webshotService from "../services/webshotService";
+import webshotService from "../services/WebshotService";
 import appconfig from "../config/app";
 
 export default class WebshotCtrl extends AppController{
