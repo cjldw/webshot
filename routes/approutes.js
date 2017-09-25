@@ -12,6 +12,10 @@ export default  {
         method: "GET",
         handle: (new Index).index
     },
+    "/test": {
+        method: "GET",
+        handle: (new Index).test
+    },
     "/webshot": {
         method: "GET",
         handle: (new Webshot()).webShot

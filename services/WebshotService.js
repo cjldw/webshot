@@ -18,15 +18,16 @@ export default class WebshotService {
      * @param height
      * @param savepath
      */
-    static screenshot(url, filename, width, height, mobile = false, savepath = "") {
-        let width = isNaN(width) ? "all" : width,
-            height = isNaN(height) ? "all" : height;
+    static screenshot(url, filename, width, height, mobile = false, delay = 0, savepath = "") {
+        width = isNaN(width) ? "all" : width;
+        height = isNaN(height) ? "all" : height;
+        delay = isNaN(delay) ? delay * 1000 : 0;
         let options = {
             "shotSize": {
                 width: width,
                 height: height
-            }
-            //"renderDelay": 3000, // after load three minute take screenshot.
+            },
+           "renderDelay": delay, // after load three minute take screenshot.
         };
 
         if (mobile) {

@@ -13,13 +13,14 @@ export default class WebshotCtrl extends AppController{
         let url = request.query.url,
             width = parseInt(request.query.w),
             height = parseInt(request.query.h),
-            mobile = !!request.query.mobile;
+            mobile = !!request.query.mobile,
+            delay = parseInt(request.query.delay);
         if (!url) {
             return response.send(super.notsuccess(1, "截屏的网页地址不能为空！"));
         }
         let filename = `${(new Date()).getTime()}_${Math.ceil(Math.random() * 10000)}.jpg`;
-        webshotService.screenshot(url, filename, width, height, mobile).then((resp) => {
-            let previewPath = `${appconfig.assetsRoot}/images/screenshots/${filename}`;
+        webshotService.screenshot(url, filename, width, height, mobile, delay).then((resp) => {
+            let previewPath = `${request.protocol}://${request.hostname}:${appconfig.port}${appconfig.assetsRoot}/images/screenshots/${filename}`;
             return response.send(super.success({query: request.query, filename: filename, preview: previewPath}));
         });
     }
