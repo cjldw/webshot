@@ -18,14 +18,21 @@ export default class WebshotService {
      * @param height
      * @param savepath
      */
-    static screenshot(url, filename, width, height, savepath = "") {
+    static screenshot(url, filename, width, height, mobile = false, savepath = "") {
+        let width = isNaN(width) ? "all" : width,
+            height = isNaN(height) ? "all" : height;
         let options = {
             "shotSize": {
-                width: "all",
-                height: "all"
+                width: width,
+                height: height
             }
             //"renderDelay": 3000, // after load three minute take screenshot.
         };
+
+        if (mobile) {
+            options.userAgent = 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_2 like Mac OS X; en-us)'
+            + ' AppleWebKit/531.21.20 (KHTML, like Gecko) Mobile/7B298g'
+        }
         return new Promise((resolve, reject) => {
             screenshot(url, SCREENSHOT_PATH + filename, options, (err) => {
                 if (err) {
