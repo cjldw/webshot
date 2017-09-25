@@ -26,9 +26,14 @@ export default class WebshotService {
             }
             //"renderDelay": 3000, // after load three minute take screenshot.
         };
-        return screenshot(url, SCREENSHOT_PATH + filename, options, (err) => {
-            console.log(err)
-        })
+        return new Promise((resolve, reject) => {
+            screenshot(url, SCREENSHOT_PATH + filename, options, (err) => {
+                if (err) {
+                    return reject(err);
+                }
+                return resolve(err);
+            })
+        });
     }
 
     /**
