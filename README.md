@@ -1,9 +1,31 @@
-# 截图服务
+# screenshot
 
-## 传递URL地址, 获取网页截图
+Easy website screenshots project Demo.
 
-## 传递HTML文本, 获取网页截图
+## Dependency
 
+- nodejs
+- expressjs
+- phatomjs
+- webshot2
+- babeljs
 
+## Install
 
-**为了部署方便, 把`node_modules`目录也提交上去**
+1. clone project `git clone https://github.com/vvotm/webshot2.git`
+
+2. install packages。 recommend use [TAOBAONPM](http://npm.taobao.org/)
+
+    ```bash
+        $ cd webshot
+        $ npm install // in china recommend use cnpm install get fast experience
+    ```
+    
+3. run app    
+
+    ```bash
+        $ npm start
+    ```
+    
+4. visit [screenshot](http://localhost:8888)
+
