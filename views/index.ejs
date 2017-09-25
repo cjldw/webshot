@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>WebShot</title>
-    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 </head>
 <body>
 <div class="container">
-    <h3>截图服务</h3>
-    <ul>
-        <li>
-            <a href="/webshot">获取URL截图</a>
-        </li>
-        <li><a href="/htmlshot">获取HTML截图</a></li>
-    </ul>
+    <div style="margin: 100px 0 auto;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h3>截图服务</h3>
+                <form action="/webshot" method="get">
+                    <div class="form-group">
+                        <label for="">地址</label>
+                        <input class="form-control" name="url" placeholder="https://www.zhanqi.tv">
+                    </div>
+                    <div class="form-group">
+                        <label for="">宽</label>
+                        <input class="form-control" name="w" placeholder="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="">高</label>
+                        <input class="form-control" name="h" placeholder="100">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="截图">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
